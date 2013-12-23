@@ -1,5 +1,5 @@
 FactoryGirl.define do
   factory :category do
-    id 1
+    name 'Special Category'
   end
 end
