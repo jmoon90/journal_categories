@@ -1,3 +1,9 @@
+<% if @journal_entry.errors.full_messages.any? %>
+  <% @journal_entry.errors.full_messages.each do |error_message| %>
+    <%= error_message %><br>
+  <% end %>
+<% end %>
+
 <%= form_for(@journal_entry) do |f| %>
   <%= f.label :title %>
   <%= f.text_field :title %><br>
@@ -5,4 +11,4 @@
   <%= f.label :description %>
   <%= f.text_area :description %><br>
   <%= f.submit %>
-  <% end %>
+<% end %>
