@@ -1,2 +1,17 @@
 <h1> All Entries </h1>
 <%= link_to 'new post', new_journal_entry_path %>
+<br>
+<table>
+  <tr>
+    <td><h3>Title</h3></td>
+    <td><h3>Description</h3></td>
+    <td><h3>Created At</h3></td>
+  </tr>
+  <% @journal_entries.each do |entry| %>
+    <tr>
+      <td><%= entry.title %></td>
+      <td><%= entry.description %></td>
+      <td><%= entry.created_at %></td>
+    </tr>
+  <% end %>
+</table>
