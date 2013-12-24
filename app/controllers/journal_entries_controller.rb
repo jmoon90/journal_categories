@@ -10,9 +10,10 @@ class JournalEntriesController < ApplicationController
   def create
     @journal_entry = JournalEntry.new(journal_params)
     if @journal_entry.save
+      flash[:success] = "Success"
       redirect_to journal_entries_path
     else
-    binding.pry
+      flash[:error] = "Error"
       render :new
     end
   end
