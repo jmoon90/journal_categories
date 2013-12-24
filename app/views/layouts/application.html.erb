@@ -8,6 +8,9 @@
 </head>
 <body>
   <div class='container'>
+    <%= link_to 'Categories', categories_path %> |
+    <%= link_to 'Journal Entries', root_path %>
+
     <% flash.each do |key, value| %>
       <div class= "alert alert-<%= key %>">
         <%= value %>
