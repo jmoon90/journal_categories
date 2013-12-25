@@ -20,6 +20,6 @@ class JournalEntriesController < ApplicationController
 
   private
   def journal_params
-    params.require(:journal_entry).permit(:title, :description)
+    params.require(:journal_entry).permit(:title, :description, :category_id)
   end
 end

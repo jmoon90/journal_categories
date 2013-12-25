@@ -9,6 +9,7 @@
   </tr>
   <% @journal_entries.each do |entry| %>
     <tr>
+      <% binding.pry %>
       <td><%= entry.title %></td>
       <td><%= entry.description %></td>
       <td><%= entry.created_at %></td>

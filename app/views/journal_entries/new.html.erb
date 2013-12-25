@@ -10,5 +10,12 @@
 
   <%= f.label :description %>
   <%= f.text_area :description %><br>
+
+  <% selection = [] %>
+  <% Category.all.each do |category| %>
+    <% selection << category.name %>
+  <% end %>
+  <%= select_tag 'journal_entry[journal_category]', options_for_select(selection) %>
+  <br>
   <%= f.submit %>
 <% end %>
